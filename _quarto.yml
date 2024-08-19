@@ -8,16 +8,6 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: sudancrisis.qmd
-        text: Sudan Crisis
-      - href: program.qmd
-        text: Updates
-      - href: assessment.qmd
-        text: Assessments
-      - href: ipcamn.qmd
-        text: IPC-AMN
-      - href: nuvac.qmd
-        text: NuVAC
       - about.qmd
 
 format:
