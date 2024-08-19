@@ -17,7 +17,6 @@ about:
 ---
 
 ```{r}
-library(lubridate)
 library(tidyverse)
 library(gt)
 library(gtExtras)
