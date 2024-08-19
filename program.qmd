@@ -1,0 +1,203 @@
+---
+title: "Program Updates"
+format: html
+echo: false
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+```{r}
+library(lubridate)
+library(tidyverse)
+library(gt)
+library(gtExtras)
+library(leaflet)
+library(plotly)
+library(viridis)
+library(hrbrthemes)
+```
+
+```{r }
+#| title: Summary Update
+#| width: 60%
+# update for all cluster plans - PIN - Target vs PIN-Target Achievements
+# link to static report
+# link to detailed dashboard - interactive 
+
+
+nis_update <- read_csv("datasets/nis.csv")
+
+nis_update |> 
+  gt() |> 
+  data_color(
+           columns = `% vs Target`, 
+           colors = c("white", "lightgreen")) |>
+  fmt_integer() |>
+    tab_header(
+    title = md("**2024 PIN, Target & Achievements by Program Type, `June 2024`**"),
+   # subtitle = md("The achievement is as of `June 2024`")
+  ) |> 
+    tab_spanner(
+    label = "Achievement",
+    columns = c(Number, `% vs PIN`, `% vs Target`)
+  ) |> 
+   tab_source_note(
+    source_note = "Source: June 2024 NIS Data"
+  ) |> 
+  tab_footnote(
+    footnote = "Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH",
+    locations = cells_column_labels(columns = PIN)) |>
+  opt_interactive(
+            use_search = TRUE,
+            #use_filters = TRUE,
+            use_resizers = TRUE,
+            use_highlight = TRUE,
+            use_compact_mode = TRUE,
+            use_text_wrapping = FALSE,
+            use_page_size_select = TRUE )
+```
+
+```{r}
+gps <- read_csv("datasets/gps.csv")
+
+#names(gps)
+names(gps) <- str_to_lower(names(gps))
+#glimpse(gps)
+
+gps <- gps |> 
+  rename(facility =`type of facillity`,
+         partner = `cooperating partner`,
+         surveyor = `surveyor name`,
+         site = `site name`,
+         latitude = latidue)
+
+gps <- gps |> 
+    mutate(longitude = as.numeric(str_replace(longitude, "NULL", "")),
+           latitude = as.numeric(str_replace(latitude, "NULL", "")))
+
+```
+
+```{r}
+gps <- gps |> 
+  mutate(state = recode(state,
+                        "Central Equatoria" = "CE",
+                        "Eastern Equatoria" = "EE",
+                        "Northern Bhar al-Ghazal" = "NBG",
+                        "Upper Nile" = "UPN",
+                        "Western Bhar al-Ghazal" = "WBG",
+                        "Western Equatoria" = "WE",
+                        "Kuajok" = "Warrap"
+                        ),
+         facility = recode(facility,
+                           "hospital" = "Hospital"))
+```
+
+```{r}
+
+gps |> 
+  filter(!is.na(longitude) & !is.na(latitude)) |> 
+  leaflet() |> 
+  setView(30, 8, 6) |> 
+  addTiles() |>
+  addMarkers(
+  clusterOptions = markerClusterOptions())
+```
+
+```{r}
+
+pal <- 
+  colorNumeric(
+    palette = "PuOr",
+    domain = gps$latitude)
+
+gps |> 
+  filter(!is.na(longitude) & !is.na(latitude)) |> 
+  leaflet() |> 
+   setView(30, 8, 6) |> 
+  addTiles() |> 
+  addCircleMarkers(lng = ~longitude, 
+                   lat = ~latitude,
+                   color = ~pal(latitude),
+                   radius = 3,
+                   
+                   stroke = FALSE, fillOpacity = 0.5)|> 
+  addLegend("bottomright", 
+            pal = pal, 
+           values = ~latitude,
+            title = "Nutrition Sites",
+            labFormat = labelFormat(prefix = "%"),
+            opacity = 1)
+```
+
+```{r}
+gps <- gps |> 
+  group_by(state) |> 
+  mutate(site_no = sum(count))
+```
+
+```{r}
+gps <- gps |> 
+  group_by(state) |> 
+  mutate(site_no = sum(count))
+```
+
+```{r}
+plt01 <- 
+  gps |> 
+  ggplot(aes(x = reorder(state, site_no), fill = facility)) +
+  geom_bar(alpha = 0.8) +
+  scale_fill_viridis(discrete = T) +
+  #annotate("text", x = "WE", y = 150, label = "the number of site ranges from 43 to 192 per state") +
+  labs( x= "States",
+        y = "Number of sites",
+        title = "Number of Nutrition Sites by State and Type,
+        1,218 sites provies nutrition services",
+        subtitle = "Thre are 1,218 nutrition sites",
+        caption = "Source: NIS 2024",
+        fill = "Site type") +
+  theme_classic()
+ #  + coord_flip()
+ggplotly(plt01)
+```
+
+```{r}
+gps |>
+  arrange(reorder(site_no, state)) |> 
+  plot_ly(x = ~state, 
+          y = ~mean(site_no),
+          color = ~facility,
+          type = 'bar') |> 
+  layout(
+    xaxis = list(categoryorder = "total ascending",
+                 title = "State"),
+    yaxis = list(title = 'Number of sites'),
+    barmode = 'stack')
+```
+
+```{r}
+gps |> 
+  group_by(state) |> 
+  select(state, site_no) |> 
+  summarize(site = mean(site_no)) |> 
+  gt() |> 
+  fmt_integer() 
+```
+
+```{r}
+gps |> 
+  pivot_wider(id_cols = state, 
+              names_from = facility, 
+              values_from = site_no, 
+              values_fn = sum) |> 
+  gt()
+```

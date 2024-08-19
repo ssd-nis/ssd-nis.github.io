@@ -10,6 +10,8 @@ website:
         text: Home
       - href: sudancrisis.qmd
         text: Sudan Crisis
+      - href: program.qmd
+        text: Program Updates
       - about.qmd
 
 format:
