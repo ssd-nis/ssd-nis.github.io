@@ -1,11 +1,17 @@
 ---
-title: "ssd-nis.github.io"
+title: "SSD_NIS Technical Working Goup"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Welcome to `South Sudan Nutrition Information Systems Technical Working Group (NIS-TWG)` page. NIS-TWG is one of the three TWG under the nutrition cluster that provides technical support to the government.
 
-```{r}
-1 + 1
-```
+On this page, you will find `dashboards`, `survey` results, `IPC-AMN` results, `data` for download, NIS related `guidelines & updates`. Links to additional dashboards and reports are available for those who wish to explore the nutrition data in detail. 

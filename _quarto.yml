@@ -2,18 +2,31 @@ project:
   type: website
 
 website:
-  title: "ssd-nis.github.io"
+  title: "SSD_NIS Technical Working Goup"
+  
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
+      - href: sudancrisis.qmd
+        text: Sudan Crisis
+      - href: program.qmd
+        text: Updates
+      - href: assessment.qmd
+        text: Assessments
+      - href: ipcamn.qmd
+        text: IPC-AMN
+      - href: nuvac.qmd
+        text: NuVAC
       - about.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    echo: false
+    warning: FALSE
+    message: FALSE
 
 
 

@@ -1,0 +1,15 @@
+{
+  "hash": "36dc164dea5ffe67562ec11ea1dcba33",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Dashboard\"\ndate: \"2024-08-15\"\ncategories: [dashboard]\nformat: \n  dashboard: \n    logo: images/breastfeeding.png\n    nav-buttons: \n      - icon: github\n        href: https://github.com/Assaye\n    orientation: rows\n    theme: flatly\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Plots {.sidebar}\nWelcome to Nutrition Information Systems Technical Working Group (NIS-TWG) page.\n\nNIS-TWG is one of the three TWG under the nutrition cluster that provides technical support to the government.\n\nOn this page, you will find summary achievements of nutrition programme, assessment results, IPC-AMN results, data for download, NIS related guidelines & updates.\n\nLinks to dashboards and reports are available for those who wish to explore the nutrition data in detail\n\n\n\n# Home\n\n\n## Row\n\n\n\n\n\n\n::: {.cell content='valuebox' title='Last updated:'}\n::: {.cell-output .cell-output-stdout}\n\n```\n$color\n[1] \"#FF9933\"\n\n$value\n[1] \"2024-08-19\"\n```\n\n\n:::\n:::\n\n::: {.cell content='valuebox' title='Survey completed'}\n::: {.cell-output .cell-output-stdout}\n\n```\n$icon\n[1] \"database\"\n\n$color\n[1] \"#00CCFF\"\n\n$value\n[1] \"32%\"\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
