@@ -1,12 +1,11 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Data Validation"
+author: "SSD NISTWG"
 date: "2024-08-12"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+The NIS TWG planned to conduct a data validation workshop from 26th to 28th Aug 2024 in Juba, South Sudan. All NIS TWG members are invited to participate and contribute!
 
 ![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

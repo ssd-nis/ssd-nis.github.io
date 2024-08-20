@@ -17,6 +17,7 @@ about:
 ---
 
 ```{r}
+library(renv)
 library(lubridate)
 library(tidyverse)
 library(gt)
@@ -102,8 +103,9 @@ gps <- gps |>
                            "hospital" = "Hospital"))
 ```
 
-```{r}
+Clustered Location of Nutrition Sites
 
+```{r}
 gps |> 
   filter(!is.na(longitude) & !is.na(latitude)) |> 
   leaflet() |> 
@@ -113,8 +115,9 @@ gps |>
   clusterOptions = markerClusterOptions())
 ```
 
-```{r}
+Nutrition Sites
 
+```{r}
 pal <- 
   colorNumeric(
     palette = "PuOr",
@@ -168,36 +171,4 @@ plt01 <-
   theme_classic()
  #  + coord_flip()
 ggplotly(plt01)
-```
-
-```{r}
-gps |>
-  arrange(reorder(site_no, state)) |> 
-  plot_ly(x = ~state, 
-          y = ~mean(site_no),
-          color = ~facility,
-          type = 'bar') |> 
-  layout(
-    xaxis = list(categoryorder = "total ascending",
-                 title = "State"),
-    yaxis = list(title = 'Number of sites'),
-    barmode = 'stack')
-```
-
-```{r}
-gps |> 
-  group_by(state) |> 
-  select(state, site_no) |> 
-  summarize(site = mean(site_no)) |> 
-  gt() |> 
-  fmt_integer() 
-```
-
-```{r}
-gps |> 
-  pivot_wider(id_cols = state, 
-              names_from = facility, 
-              values_from = site_no, 
-              values_fn = sum) |> 
-  gt()
 ```

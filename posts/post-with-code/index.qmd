@@ -1,12 +1,12 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
+title: "NIS-TWG Meeting"
+author: "SSD NIS-TWG"
 date: "2024-08-15"
-categories: [news, code, analysis]
+categories: [news]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
+This is to let you know that the next NIS TWG meeting is scheduled for 29th Aug 2024.
 
 ```{r}
 1 + 1

@@ -2,9 +2,19 @@ project:
   type: website
 
 website:
-  title: "SSD_NIS Technical Working Goup"
+  image: "/images/breastfeeding.png"
+  title: "South Sudan NIS Technical Working Goup"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "For detailed program data check - https://ssd-nut-info.shinyapps.io/shiny/ !"
+    # type: primary
+    position: below-navbar
+  page-footer: "Copyright 2024, South Sudan NIS TWG" 
+
   
   navbar:
+    search: true
     right:
       - href: index.qmd
         text: Home
@@ -12,6 +22,12 @@ website:
         text: Sudan Crisis
       - href: program.qmd
         text: Program Updates
+      - href: assessment.qmd
+        text: Assessments
+      - href: ipcamn.qmd
+        text: IPC-AMN
+      - href: nuvac.qmd
+        text: NuVAC
       - about.qmd
 
 format:
@@ -21,6 +37,7 @@ format:
     echo: false
     warning: FALSE
     message: FALSE
+    toc: true
 
 
 
