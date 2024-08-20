@@ -12,13 +12,6 @@ format:
     theme: flatly
 ---
 
-```{r}
-library(lubridate)
-library(tidyverse)
-library(gt)
-library(gtExtras)
-
-```
 
 ## Plots {.sidebar}
 Welcome to Nutrition Information Systems Technical Working Group (NIS-TWG) page.

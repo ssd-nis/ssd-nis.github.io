@@ -16,6 +16,12 @@ about:
       href: https://github.com
 ---
 
+```{r}
+
+#install.packages("pacman")
+#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes   )
+```
+
 ```{r }
 #| title: Summary Update
 #| width: 60%

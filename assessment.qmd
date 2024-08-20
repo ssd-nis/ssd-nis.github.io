@@ -10,13 +10,6 @@ format:
     theme: flatly
 ---
 
-```{r}
-library(lubridate)
-library(tidyverse)
-library(gt)
-library(gtExtras)
-
-```
 
 # Home
 
