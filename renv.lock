@@ -12,7 +12,20 @@
       }
     ]
   },
+  "Bioconductor": {
+    "Version": "3.19"
+  },
   "Packages": {
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.23",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "47e968dfe563c1b22c2e20a067ec21d5"
+    },
     "DBI": {
       "Package": "DBI",
       "Version": "1.2.3",
@@ -1179,23 +1192,6 @@
         "xfun"
       ],
       "Hash": "074efab766a9d6360865ad39512f2a7e"
-    },
-    "matrix": {
-      "Package": "Matrix",
-      "Version": "1.7-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "grDevices",
-        "graphics",
-        "grid",
-        "lattice",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "1920b2f11133b12350024297d8a4ff4a"
     },
     "memoise": {
       "Package": "memoise",

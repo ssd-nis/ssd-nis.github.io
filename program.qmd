@@ -20,10 +20,13 @@ about:
 library(tidyverse)
 #install.packages("pacman")
 # pacman - installs packages that are not yet installed
-#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, matrix)
+#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, BiocManager, Matrix)
 
 # renv::snapshot()
-# us the above to see packages in you renv
+# us the above to update packages in you renv
+
+# sessionInfo()
+# gives you details
 ```
 
 ```{r }
