@@ -10,6 +10,9 @@ format:
     theme: flatly
 ---
 
+```{r}
+library(tidyverse)
+```
 
 # Home
 

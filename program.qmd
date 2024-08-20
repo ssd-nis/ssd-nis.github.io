@@ -18,7 +18,6 @@ about:
 
 ```{r}
 library(tidyverse)
-
 #install.packages("pacman")
 #pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes   )
 ```
