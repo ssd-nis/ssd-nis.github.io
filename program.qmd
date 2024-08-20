@@ -19,7 +19,11 @@ about:
 ```{r}
 library(tidyverse)
 #install.packages("pacman")
-#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes   )
+# pacman - installs packages that are not yet installed
+#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, matrix)
+
+# renv::snapshot()
+# us the above to see packages in you renv
 ```
 
 ```{r }
