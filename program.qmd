@@ -18,6 +18,7 @@ about:
 
 ```{r}
 library(tidyverse)
+library(Matrix)
 #install.packages("pacman")
 # pacman - installs packages that are not yet installed
 #pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, BiocManager, Matrix)
