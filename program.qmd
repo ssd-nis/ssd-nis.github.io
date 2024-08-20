@@ -16,18 +16,6 @@ about:
       href: https://github.com
 ---
 
-```{r}
-library(renv)
-library(lubridate)
-library(tidyverse)
-library(gt)
-library(gtExtras)
-library(leaflet)
-library(plotly)
-library(viridis)
-library(hrbrthemes)
-```
-
 ```{r }
 #| title: Summary Update
 #| width: 60%
