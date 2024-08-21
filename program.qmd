@@ -18,16 +18,25 @@ about:
 
 ```{r}
 library(tidyverse)
-library(Matrix)
+library(gt)
+library(gtExtras)
+library(leaflet)
+library(plotly)
+library(viridis)
+library(hrbrthemes)
 #install.packages("pacman")
 # pacman - installs packages that are not yet installed
 #pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, BiocManager, Matrix)
 
 # renv::snapshot()
 # us the above to update packages in you renv
+# renv::status()
+# then use the above to check that the project is consistent
 
 # sessionInfo()
 # gives you details
+
+
 ```
 
 ```{r }

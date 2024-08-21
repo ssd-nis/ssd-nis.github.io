@@ -7,11 +7,13 @@ format:
       - icon: github
         href: https://github.com/Assaye
     orientation: rows
-    theme: flatly
 ---
 
 ```{r}
 library(tidyverse)
+library(gt)
+library(gtExtras)
+
 ```
 
 # Home
