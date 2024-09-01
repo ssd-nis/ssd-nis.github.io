@@ -1,58 +1,48 @@
 ---
-title: "Dashboard"
-date: "2024-08-15"
-categories: [dashboard]
-format: 
-  dashboard: 
-    logo: images/breastfeeding.png
-    nav-buttons: 
-      - icon: github
-        href: https://github.com/Assaye
-    orientation: rows
-    theme: flatly
+title: "Program Updates"
+author: "SSD NIS-TWG"
+date: "2024-08-20"
+categories: [news]
+image: "update.jpg"
 ---
 
-
-## Plots {.sidebar}
-Welcome to Nutrition Information Systems Technical Working Group (NIS-TWG) page.
-
-NIS-TWG is one of the three TWG under the nutrition cluster that provides technical support to the government.
-
-On this page, you will find summary achievements of nutrition programme, assessment results, IPC-AMN results, data for download, NIS related guidelines & updates.
-
-Links to dashboards and reports are available for those who wish to explore the nutrition data in detail
-
-
-
-# Home
-
-
-## Row
-
+This is a summary of 2024 people in need (PIN), cluster target and achievement in number, compared to PIN and target for the year as of July 2024. For more details on program update please refer to the update section and for more interactive experience check a this dashboard - <https://ssd-nut-info.shinyapps.io/shiny/>
 
 ```{r}
-#| content: valuebox
-#| title: "Last updated:" 
-n <- Sys.Date()
-
-list(
- # icon = "calendar-month-fill",
-  color = "#FF9933",
-  value = n
-)
+library(tidyverse)
+library(gt)
+library(gtExtras)
 ```
 
-```{r}
-#| content: valuebox
-#| title: "Survey completed"
-#n <- mtcars |> tibble::as_tibble() |> dplyr::count() |> dplyr::pull(n)
-n <- "32%"
+```{r }
+nis_update <- read_csv("../../datasets/nis.csv")
 
-list(
-  icon = "database",
-  color = "#00CCFF",
-  value = n
-)
+nis_update |> 
+  gt() |> 
+  data_color(
+           columns = `% vs Target`, 
+           colors = c("white", "lightgreen")) |>
+  fmt_integer() |>
+    tab_header(
+    title = md("**2024 PIN, Target & Achievements by Program Type, `July 2024`**"),
+   # subtitle = md("The achievement is as of `June 2024`")
+  ) |> 
+    tab_spanner(
+    label = "Achievement",
+    columns = c(Reached, `% vs PIN`, `% vs Target`)
+  ) |> 
+   tab_source_note(
+    source_note = "Source: July 2024 NIS Data"
+  ) |> 
+  tab_footnote(
+    footnote = "Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH",
+    locations = cells_column_labels(columns = PIN)) |>
+  opt_interactive(
+            use_search = TRUE,
+            #use_filters = TRUE,
+            use_resizers = TRUE,
+            use_highlight = TRUE,
+            use_compact_mode = TRUE,
+            use_text_wrapping = FALSE,
+            use_page_size_select = TRUE )
 ```
-
-

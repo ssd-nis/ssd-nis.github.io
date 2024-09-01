@@ -17,6 +17,7 @@ about:
 ---
 
 ```{r}
+library(lubridate)
 library(tidyverse)
 library(gt)
 library(gtExtras)
@@ -26,17 +27,17 @@ library(viridis)
 library(hrbrthemes)
 #install.packages("pacman")
 # pacman - installs packages that are not yet installed
-#pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, BiocManager, Matrix)
+pacman::p_load(renv, lubridate, tidyverse, gt, gtExtras, leaflet, plotly, viridis, hrbrthemes, BiocManager, Matrix)
 
 # renv::snapshot()
 # us the above to update packages in you renv
+
 # renv::status()
+# str(renv::status())
 # then use the above to check that the project is consistent
 
 # sessionInfo()
 # gives you details
-
-
 ```
 
 ```{r }
@@ -56,15 +57,15 @@ nis_update |>
            colors = c("white", "lightgreen")) |>
   fmt_integer() |>
     tab_header(
-    title = md("**2024 PIN, Target & Achievements by Program Type, `June 2024`**"),
+    title = md("**2024 PIN, Target & Achievements by Program Type, `July 2024`**"),
    # subtitle = md("The achievement is as of `June 2024`")
   ) |> 
     tab_spanner(
     label = "Achievement",
-    columns = c(Number, `% vs PIN`, `% vs Target`)
+    columns = c(Reached, `% vs PIN`, `% vs Target`)
   ) |> 
    tab_source_note(
-    source_note = "Source: June 2024 NIS Data"
+    source_note = "Source: July 2024 NIS Data"
   ) |> 
   tab_footnote(
     footnote = "Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH",

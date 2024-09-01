@@ -8,4 +8,3 @@ categories: [news]
 The NIS TWG planned to conduct a data validation workshop from 26th to 28th Aug 2024 in Juba, South Sudan. All NIS TWG members are invited to participate and contribute!
 
 ![](thumbnail.jpg)
-

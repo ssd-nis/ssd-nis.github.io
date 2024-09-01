@@ -14,11 +14,25 @@
     "text": "The NIS TWG planned to conduct a data validation workshop from 26th to 28th Aug 2024 in Juba, South Sudan. All NIS TWG members are invited to participate and contribute!"
   },
   {
-    "objectID": "ipcamn.html",
-    "href": "ipcamn.html",
-    "title": "IPC-AMN",
+    "objectID": "posts/demo/index.html",
+    "href": "posts/demo/index.html",
+    "title": "Program Updates",
     "section": "",
-    "text": "The Integrated Phase Classification of Acute Malnutrition (IPC AMN) provides key information for decision makers that focuses on short to long-term objectives to decrease acute malnutrition. Together with the IPC Acute Food Insecurity, the IPC Acute Malnutrition classification also provides information on acute food insecurity, making IPC an inclusive classification system to inform both acute food insecurity and acute malnutrition.\nThe 2024 IPC Analysis Workshop is scheduled to be held in Juba, South Sudan from Sept 10th to 25th 2024."
+    "text": "This is a summary of 2024 people in need (PIN), cluster target and achievement in number, compared to PIN and target for the year as of July 2024. For more details on program update please refer to the update section and for more interactive experience check a this dashboard - https://ssd-nut-info.shinyapps.io/shiny/\n\n\n\n\n\n2024 PIN, Target & Achievements by Program Type, July 2024\n\n\n\n\n\n\n\nSource: July 2024 NIS Data\n\n\n\n\n1 Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH"
+  },
+  {
+    "objectID": "meriam.html",
+    "href": "meriam.html",
+    "title": "MERIAM",
+    "section": "",
+    "text": "The Nutrition Vulnerabilities Assessment in Crisis (NuVAC) is a framework for nutrition analysis and a mechanism to facilitate a coordinated early warning system to prevent and respond to deterioration of nutrition situation."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome !",
+    "section": "",
+    "text": "Welcome to South Sudan Nutrition Information Systems Technical Working Group (NIS-TWG) page. NIS-TWG is one of the three TWG under the nutrition cluster that provides technical support to the government.\nOn this page, you will find dashboards, survey results, IPC-AMN results, data for download, NIS related guidelines & updates. Links to additional dashboards and reports are available for those who wish to explore the nutrition data in detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProgram Updates\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 20, 2024\n\n\nSSD NIS-TWG\n\n\n\n\n\n\n\n\n\n\n\n\nNIS-TWG Meeting\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 15, 2024\n\n\nSSD NIS-TWG\n\n\n\n\n\n\n\n\n\n\n\n\nData Validation\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 12, 2024\n\n\nSSD NISTWG\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -28,11 +42,18 @@
     "text": "About this site\n\n\n[1] 2"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome !",
+    "objectID": "flood.html",
+    "href": "flood.html",
+    "title": "Flood Response",
     "section": "",
-    "text": "Welcome to South Sudan Nutrition Information Systems Technical Working Group (NIS-TWG) page. NIS-TWG is one of the three TWG under the nutrition cluster that provides technical support to the government.\nOn this page, you will find dashboards, survey results, IPC-AMN results, data for download, NIS related guidelines & updates. Links to additional dashboards and reports are available for those who wish to explore the nutrition data in detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboard\n\n\n\n\n\n\ndashboard\n\n\n\n\n\n\n\n\n\nAug 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nNIS-TWG Meeting\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 15, 2024\n\n\nSSD NIS-TWG\n\n\n\n\n\n\n\n\n\n\n\n\nData Validation\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nAug 12, 2024\n\n\nSSD NISTWG\n\n\n\n\n\n\nNo matching items"
+    "text": "About this site\n\n\n[1] 2"
+  },
+  {
+    "objectID": "ipcamn.html",
+    "href": "ipcamn.html",
+    "title": "IPC-AMN",
+    "section": "",
+    "text": "The Integrated Phase Classification of Acute Malnutrition (IPC AMN) provides key information for decision makers that focuses on short to long-term objectives to decrease acute malnutrition. Together with the IPC Acute Food Insecurity, the IPC Acute Malnutrition classification also provides information on acute food insecurity, making IPC an inclusive classification system to inform both acute food insecurity and acute malnutrition.\nThe 2024 IPC Analysis Workshop is scheduled to be held in Juba, South Sudan from Sept 10th to 25th 2024."
   },
   {
     "objectID": "nuvac.html",
@@ -53,6 +74,6 @@
     "href": "program.html",
     "title": "Program Updates",
     "section": "",
-    "text": "2024 PIN, Target & Achievements by Program Type, June 2024\n\n\n\n\n\n\n\nSource: June 2024 NIS Data\n\n\n\n\n1 Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH\n\n\n\n\n\n\n\nClustered Location of Nutrition Sites\n\n\n\n\n\n\nNutrition Sites"
+    "text": "2024 PIN, Target & Achievements by Program Type, July 2024\n\n\n\n\n\n\n\nSource: July 2024 NIS Data\n\n\n\n\n1 Note: The PIN & Target for Vitamin A & Deworming was adjusted by the MOH\n\n\n\n\n\n\n\nClustered Location of Nutrition Sites\n\n\n\n\n\n\nNutrition Sites"
   }
 ]

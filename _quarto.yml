@@ -2,33 +2,55 @@ project:
   type: website
 
 website:
-  image: "/images/breastfeeding.png"
   title: "South Sudan NIS Technical Working Goup"
+ 
   announcement: 
     icon: info-circle
     dismissable: true
-    content: "For detailed program data check - https://ssd-nut-info.shinyapps.io/shiny/ !"
+    content: "For detailed program data check @ https://ssd-nut-info.shinyapps.io/shiny/"
     # type: primary
     position: below-navbar
   page-footer: "Copyright 2024, South Sudan NIS TWG" 
 
   
   navbar:
+
+    logo: "/images/breastfeeding.png"
+    background: dark
+    foreground: light
+    pinned: true
+   # collapse: true
     search: true
+    tools: 
+      - icon: github
+        href: https://github.com/ssd-nis
+
     right:
       - href: index.qmd
         text: Home
+        
       - href: sudancrisis.qmd
-        text: Sudan Crisis
+        text: Emergency
+      - menu: 
+        - href: sudancrisis.qmd
+        - href: flood.qmd
+        
       - href: program.qmd
-        text: Program Updates
-      - href: assessment.qmd
-        text: Assessments
-      - href: ipcamn.qmd
-        text: IPC-AMN
+        text: Updates
+      - menu: 
+        - href: program.qmd
+        - href: assessment.qmd
+        - href: ipcamn.qmd
+
       - href: nuvac.qmd
-        text: NuVAC
-      - about.qmd
+        text: Projects
+      - menu: 
+          - href: nuvac.qmd
+          - href: meriam.qmd
+          
+      - href: about.qmd
+        text: Downloads
+
 
 format:
   html:
